@@ -1,0 +1,36 @@
+---
+title: "week4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+# H1
+## H2
+### H3
+
+1. YAYAYAYA
+
+1. TATATA
+
+1. NGKLNGLKNG   
+
+- First item
+- Second item
+- Third item
+
+**123**
+
+***123***
+
+*123*
+
+---
+
+x<-1 2 3
+
+---
