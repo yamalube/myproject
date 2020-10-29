@@ -1,0 +1,24 @@
+---
+title: "week7  10/29"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r setup, include=FALSE}
+N<-100
+S<-rnorm(N,5,2)
+bmu<-numeric(1000)
+for(i in 1:1000){
+  rndno<-as.integer(runif(N)*N)+1
+  smp<-S[rndno]
+  bmu[i]<-mean(smp)
+}
+
+p<-density(bmu)
+plot(p)
+
+
+```
