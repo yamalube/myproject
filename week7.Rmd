@@ -7,7 +7,10 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r setup, include=FALSE}
+
+
+
+```{r}
 N<-100
 S<-rnorm(N,5,2)
 bmu<-numeric(1000)
