@@ -1,0 +1,26 @@
+---
+title: "week9"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+uu <- seq(0,1,length=10)
+zscores <-qnorm(uu)
+zscores[3] <-NA
+zscores
+which(zscores==-Inf)
+which(zscores==Inf)
+NA==NA
+NA==0
+c1<-zscores[!is.na(zscores)]
+c1
+
+
+
+
+
+```
