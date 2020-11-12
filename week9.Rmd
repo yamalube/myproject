@@ -20,7 +20,15 @@ c1<-zscores[!is.na(zscores)]
 c1
 
 
+```
 
+```{r}
+
+AA <-function(x){
+x <- rpois(30,2)
+return(x[x%%2==0])
+}
+AA(x)
 
 
 ```

@@ -432,6 +432,12 @@ zscores</code></pre>
 c1</code></pre>
 <pre><code>## [1]       -Inf -1.2206403 -0.4307273 -0.1397103  0.1397103  0.4307273  0.7647097
 ## [8]  1.2206403        Inf</code></pre>
+<pre class="r"><code>AA &lt;-function(x){
+x &lt;- rpois(30,2)
+return(x[x%%2==0])
+}
+AA(x)</code></pre>
+<pre><code>##  [1] 2 4 2 2 2 2 2 0 4 0 4</code></pre>
 
 
 
