@@ -7,6 +7,26 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+```{r}
+myfilter<-function(x,min,max){
+  rst<-x<=0.5
+  le2<-x[rst]
+  rst2<-le2>=min
+  xx<-le2[rst2]
+  return(xx)
+}
+
+x<-rnorm(10)
+myfilter(x,min=-0.2,max=0.2)
+
+
+```
+
+
+
+
+
 ```{r}
 uu <- seq(0,1,length=10)
 zscores <-qnorm(uu)
