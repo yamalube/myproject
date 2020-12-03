@@ -13,3 +13,13 @@ week 4
 week 7
 [week 7](week7.html)
 
+week9
+[week 9](week9.Rmd)
+
+week11
+[week 11](week11.Rmd)
+
+week12
+[week 12](week12.Rmd)
+
+老師的網址(https://airbone4.github.io/blogR)

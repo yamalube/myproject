@@ -1,0 +1,49 @@
+---
+title: "week12"
+output: html_document
+---
+
+https://airbone4.github.io/blogR
+
+```{r}
+f2<-c("高","高","高","中","中","低","低","低","低")
+f2<-factor(f2)
+f1<-c("高","高","高","中","中","低","低","低","低")
+f1<-factor(f1,levels = c("低","中","高"),order=T)
+f1
+f2
+
+```
+
+```{r}
+mydata<-read.csv("trees91.csv")
+mydata$C<-factor(mydata$C)
+mydata$N<-factor(mydata$N)
+summary(mydata)
+barplot(table(mydata$C))
+
+
+```
+
+```{r}
+mydata1<-read.csv("trees91x.csv",encoding = "UTF-8")
+
+mydata1$`中文`<-factor(mydata1$`中文`)
+table(mydata1$中文)
+
+
+```
+
+
+```{r}
+paste0("a","b") #"a"+"b"="a `sep` b" ,sep=""
+paste0("a","b",collapse = "-------")
+paste0(c("a","b"),c(1,2))
+paste0(c("a","b"),c(1,2),collapse = "<----------->")
+print("---------------")
+paste("a","b") #"a" + "b" = "a `sep` b" ,sep=" "
+
+
+```
+paste0是paste的簡化版，paste裡面的參數sep預設為" "
+paste() == paste(,sep="")
