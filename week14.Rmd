@@ -1,0 +1,75 @@
+---
+title: "week14"
+output: html_document
+---
+
+```{r}
+library(DT)
+fm<-read.csv(file = "c:/temp/wh.csv",header = T,comment.char = "#",as.is = T)
+fm$weight<-as.numeric(fm$weight)
+fm$ratio<-fm$height/fm$weight
+datatable(fm,rownames=F)
+colnames(fm)<-c("身高","體重","性別","比例")
+write.csv(fm,file="c:/temp/foo.csv",row.names = F)
+fm2<-read.csv(file="c:/temp/foo.csv")
+```
+
+```{r}
+fm3<-read.csv(file="c:/temp/wh_chinese.csv",header = T,comment.char = "#",fileEncoding = "UTF-8")
+
+```
+
+```{r}
+ms<-installed.packages()
+#View(ms)
+#str(ms)
+#dimnames(ms)
+fm<-data.frame(ms)
+datatable(fm)
+
+#1
+#col1<-fm$Packgae
+#col2<-fm$LibPath
+#col3<-fm$
+
+fm2<-fm[,1:3]
+colnames(fm2)<-c("套件","路徑","版本")
+write.csv(fm2,file="c:/temp/foo.csv",row.names = F)
+```
+
+```{r}
+mm<-matrix(c(1,2,9,3,5,9,1,2),2,4)
+mm
+mm[order(mm[,2]),]
+
+
+```
+
+```{r}
+fm4<-read.csv(file="c:/temp/foo.csv",as.is = T)
+str(fm4$版本)
+fm5<-fm4[order(fm4$版本),]
+head(fm5,10)
+datatable(fm5)
+uu<-strsplit(fm4$版本,".",fixed=T)
+#str(uu)
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
