@@ -1,0 +1,51 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+rr<-runif(1000)
+rr1<-runif(2000)
+qqplot(rr,rr1)
+```
+
+
+```{r}
+rr<-runif(1000)
+rr1<-rnorm(2000)
+qqplot(rr,rr1)
+```
+
+```{r}
+library(car)
+my_data <- ToothGrowth
+qqPlot(my_data$len)
+```
+
+```{r}
+EDA <- function (x)
+{ 
+  par(mfrow=c(2,2))              
+  hist(x)                        
+  dotchart(x)                    
+  boxplot(x,horizontal=T)        
+  qqnorm(x);qqline(x)            
+  par(mfrow=c(1,1))              
+}
+MS=read.csv("mathstat.csv",header=T)
+EDA(MS$maths)
+
+```
+
+
+
+
+
+
+
+
+
